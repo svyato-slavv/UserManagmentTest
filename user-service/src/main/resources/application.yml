@@ -1,0 +1,36 @@
+server:
+  port: 702
+  error:
+    include-binding-errors: always
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:700/eureka
+    register-with-eureka: true
+    fetch-registry: true
+
+spring:
+  application:
+    name: USER-SERVICE
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/users
+    driver-class-name: org.postgresql.Driver
+    password: user
+    username: user
+
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        default_schema: public
+        format_sql: true
+
+  web:
+    resources:
+      add-mappings: false

@@ -1,0 +1,45 @@
+server:
+  servlet:
+    context-path: /
+  port: 777
+
+spring:
+  application:
+    name: API-GATEWAY
+  profiles:
+    active:
+      - default
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      routes:
+        - id: USER-SERVICE
+          uri: lb://user-service
+          predicates:
+            - Path=/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: user-service
+                fallbackuri: forward:/userFallback
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:700/eureka
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
