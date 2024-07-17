@@ -1,0 +1,1 @@
+INSERT INTO admin_credential (login, password) VALUES ('admin','{bcrypt}$2a$12$Q2lwBsyyO4VpDbZeIt3A9u.KmTuuzu1lOM9AjdeZo3AcEblhgixQu');

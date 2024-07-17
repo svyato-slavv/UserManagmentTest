@@ -1,0 +1,40 @@
+server:
+  port: 701
+
+spring:
+  application:
+    name: AUTHENTICATION-SERVICE
+  datasource:
+    url: jdbc:postgresql://localhost:5433/users
+    driver-class-name: org.postgresql.Driver
+    password: user
+    username: user
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        default_schema: public
+        format_sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+      data-locations: classpath*:db/data.sql
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:700/eureka
+    register-with-eureka: true
+    fetch-registry: true
+
+jwt:
+  secret:
+    access: F8A136B44BE6E9E970F1B0851E23632A3FC28DD4A40979BDB904A6C4D54C925B
+    accessInMinutesLifeTime: 5
+    refresh: F6A136B44BE6E9E970F1B0851E23632A3FC28DD4A40979BDB904A6C4D54C923B
+    refreshInDaysLifeTime: 30

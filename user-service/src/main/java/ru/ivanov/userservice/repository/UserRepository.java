@@ -24,12 +24,12 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
     default void deleteExistedUser(int id) {
         if (delete(id) == 0) {
-            throw new NotFoundException("User with id=" + id + " not found");
+            throw new NotFoundException("Пользователь с id=" + id + " ненайден");
         }
     }
 
     default User getExistedUser(int id) {
-        return findById(id).orElseThrow(() -> new NotFoundException("User with id=" + id + " not found"));
+        return findById(id).orElseThrow(() -> new NotFoundException("Пользователь с id=" + id + " ненайден"));
     }
 
 }

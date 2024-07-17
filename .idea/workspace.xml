@@ -4,7 +4,79 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="beb656b2-adea-40b6-a7de-65d80f177b85" name="Changes" comment="" />
+    <list default="true" id="beb656b2-adea-40b6-a7de-65d80f177b85" name="Changes" comment="Version without security and tests">
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/ru/ivanov/apigateway/config/RestTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/ru/ivanov/apigateway/dto/request/AccessTokenRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/ru/ivanov/apigateway/dto/response/ValidateAccessTokenResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/ru/ivanov/apigateway/exception/AccessTokenNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/ru/ivanov/apigateway/exception/ExternalServiceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/ru/ivanov/apigateway/exception/constant/ErrorMessages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/ru/ivanov/apigateway/exception/dto/ErrorResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/ru/ivanov/apigateway/filter/AuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/ru/ivanov/apigateway/filter/RouteValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/ru/ivanov/apigateway/service/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/ru/ivanov/apigateway/service/impl/AuthenticationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/AuthenticationServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/config/PasswordEncoderConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/controller/impl/AuthControllerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/data/constant/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/data/model/AdminCredential.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/data/model/RefreshToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/data/repository/AdminCredentialRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/data/repository/RefreshTokenRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/dto/request/AccessTokenRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/dto/request/JwtRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/dto/request/RefreshJwtRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/dto/response/JwtResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/dto/response/ValidateAccessTokenResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/exception/AccessTokenSignatureIsNotValidException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/exception/AccountBlockedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/exception/ExpiredAccessTokenException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/exception/IncorrectPasswordException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/exception/RefreshSignatureNotValidException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/exception/RefreshTokenExpiredException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/exception/RefreshTokenNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/exception/TokenNotValidException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/exception/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/exception/constant/ErrorMessages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/exception/dto/ErrorResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/exception/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/service/JwtProviderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/service/RefreshTokenService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/service/impl/JwtProviderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/service/impl/RefreshTokenServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/java/ru/ivanov/authenticationservice/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/main/resources/db/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-service/src/test/java/ru/ivanov/authenticationservice/AuthenticationServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/ivanov/userservice/dto/response/UserResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/ru/ivanov/userservice/controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e73d4f85-29c5-47cf-9a59-6e9cb7a46e1a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e73d4f85-29c5-47cf-9a59-6e9cb7a46e1a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e73d4f85-29c5-47cf-9a59-6e9cb7a46e1a/storage_v2/_src_/database/users.CI6mBg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e73d4f85-29c5-47cf-9a59-6e9cb7a46e1a/storage_v2/_src_/database/users.CI6mBg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/ru/ivanov/apigateway/controller/FallBackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/ru/ivanov/apigateway/controller/FallBackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/ivanov/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/ivanov/userservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/ivanov/userservice/dto/request/UserTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/ivanov/userservice/dto/request/UserRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/ivanov/userservice/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/ivanov/userservice/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/ru/ivanov/util/UsersUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/ivanov/util/UsersUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,11 +85,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -37,6 +112,16 @@
     "Docker.docker-compose.yml.database: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
     "JUnit.EurekaServerApplicationTest.contextLoads.executor": "Run",
+    "JUnit.UserControllerTest.create.executor": "Run",
+    "JUnit.UserControllerTest.createShouldThrowEmailAlreadyTakenException.executor": "Run",
+    "JUnit.UserControllerTest.createWithLocation.executor": "Run",
+    "JUnit.UserControllerTest.delete.executor": "Run",
+    "JUnit.UserControllerTest.deleteShouldReturnNotFound.executor": "Run",
+    "JUnit.UserControllerTest.executor": "Run",
+    "JUnit.UserControllerTest.findById.executor": "Run",
+    "JUnit.UserControllerTest.findByIdThrowsNotFoundException.executor": "Run",
+    "JUnit.UserControllerTest.update.executor": "Run",
+    "JUnit.UserControllerTest.updateShouldReturnNotFound.executor": "Run",
     "Maven.user-management [clean].executor": "Run",
     "Maven.user-management [install].executor": "Run",
     "Maven.user-management [package].executor": "Run",
@@ -47,12 +132,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.AuthenticationServiceApplication.executor": "Run",
     "Spring Boot.EurekaServerApplication.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/user/IdeaProjects/A-Money",
+    "last_opened_file_path": "C:/Users/user/user-management/api-gateway/src/main/java/ru/ivanov/apigateway",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,15 +154,29 @@
     ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\user-management\api-gateway\src\main\java\ru\ivanov\apigateway" />
+      <recent name="C:\Users\user\user-management\authentication-service" />
+      <recent name="C:\Users\user\user-management\authentication-service\src\main\java\ru\ivanov\authenticationservice" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\user-management\authentication-service\src\main\resources\db" />
+      <recent name="C:\Users\user\user-management\authentication-service\src\main\resources" />
+      <recent name="C:\Users\user\user-management\user-service\src\main\resources" />
+      <recent name="C:\Users\user\user-management\user-service\src\main\resources\db" />
       <recent name="C:\Users\user\user-management" />
-      <recent name="C:\Users\user\user-management\user-service" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.ivanov.userservice.controller" />
+      <recent name="ru.ivanov.userservice.service.impl" />
+      <recent name="ru.ivanov.apigateway" />
       <recent name="ru.ivanov.eureka_server" />
     </key>
   </component>
@@ -88,18 +189,81 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
-    <configuration name="EurekaServerApplicationTest.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="eureka-server" />
+  <component name="RunManager" selected="JUnit.UserControllerTest">
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.ivanov.eurekaserver.*" />
+          <option name="PATTERN" value="ru.ivanov.userservice.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.ivanov.eureka_server" />
-      <option name="MAIN_CLASS_NAME" value="ru.ivanov.eurekaserver.EurekaServerApplicationTest" />
-      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="PACKAGE_NAME" value="ru.ivanov.userservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="ru.ivanov.userservice.controller.UserControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.createShouldThrowEmailAlreadyTakenException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.ivanov.userservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.ivanov.userservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="ru.ivanov.userservice.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="createShouldThrowEmailAlreadyTakenException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.deleteShouldReturnNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.ivanov.userservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.ivanov.userservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="ru.ivanov.userservice.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="deleteShouldReturnNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.ivanov.userservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.ivanov.userservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="ru.ivanov.userservice.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="update" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.updateShouldReturnNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.ivanov.userservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.ivanov.userservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="ru.ivanov.userservice.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="updateShouldReturnNotFound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,40 +304,18 @@
       </method>
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.database: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="database" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="postgres" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
+        <settings />
       </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml.database: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
-        <item itemvalue="JUnit.EurekaServerApplicationTest.contextLoads" />
+        <item itemvalue="JUnit.UserControllerTest" />
+        <item itemvalue="JUnit.UserControllerTest.createShouldThrowEmailAlreadyTakenException" />
+        <item itemvalue="JUnit.UserControllerTest.deleteShouldReturnNotFound" />
+        <item itemvalue="JUnit.UserControllerTest.updateShouldReturnNotFound" />
+        <item itemvalue="JUnit.UserControllerTest.update" />
       </list>
     </recent_temporary>
   </component>
@@ -194,11 +336,49 @@
       <updated>1721114680518</updated>
       <workItem from="1721114681591" duration="259000" />
       <workItem from="1721114955966" duration="480000" />
-      <workItem from="1721115443299" duration="17780000" />
+      <workItem from="1721115443299" duration="19058000" />
+      <workItem from="1721199887232" duration="560000" />
+      <workItem from="1721200465854" duration="18030000" />
     </task>
+    <task id="LOCAL-00001" summary="Version without security and tests">
+      <option name="closed" value="true" />
+      <created>1721140934818</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721140934818</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Version without security and tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version without security and tests" />
   </component>
 </project>

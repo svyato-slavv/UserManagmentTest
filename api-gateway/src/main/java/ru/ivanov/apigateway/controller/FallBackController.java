@@ -12,4 +12,9 @@ public class FallBackController {
         return Mono.just("User-service не отвечает!");
     }
 
+    @RequestMapping("/authenticationFallback")
+    public Mono<String> authenticationServiceFallback() {
+        return Mono.just("Authentication service не отвечает!");
+    }
+
 }
