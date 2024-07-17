@@ -15,35 +15,36 @@
  - User-Service
  - Authentication-service
 
-1.База поднимается через docker-compose
-2.Запуск по очереди: Eureka-server->Api-Gateway->Authentication-service->User-service
-3.Реализована Jwt аутентификация с блокировкой администратора, в случае неправильного ввода пароля 3 раза.
-Время жизни access-токена - 5 минут, refresh-token - 30 дней.
-При запуске добавляется администратор c логином - admin паролем - admin
-4.Действующие URL:
-1) Авторизация: POST http://localhost:777/api/v1/auth/login
+-- База поднимается через docker-compose
+-- Запуск по очереди: Eureka-server->Api-Gateway->Authentication-service->User-service
+-- Написано 8 тестов на UserController
+-- Реализована Jwt аутентификация с блокировкой администратора, в случае неправильного ввода пароля 3 раза.
+   Время жизни access-токена - 5 минут, refresh-token - 30 дней.
+-- При запуске добавляется администратор c логином - admin паролем - admin
+-- Действующие URL:
+- Авторизация: POST http://localhost:777/api/v1/auth/login
 Тело:
 {
     "login" : "admin",
     "password" : "admin"
 }
-2) Добавить пользователя: POST http://localhost:777/api/v1/users
+- Добавить пользователя: POST http://localhost:777/api/v1/users
   В "Authorization" добавить - access-токен
 {
     "name": "username",
     "password": "user",
     "email": "user@mail.ru"
 }
-3) Получить пользователя: GET http://localhost:777/api/v1/users/1
+- Получить пользователя: GET http://localhost:777/api/v1/users/1
   В "Authorization" добавить - access-токен
-4) Обновить данные пользователя: PUT http://localhost:777/api/v1/users/1
+- Обновить данные пользователя: PUT http://localhost:777/api/v1/users/1
   В "Authorization" добавить - access-токен
 {
     "name": "username2",
     "password": "user2",
     "email": "user2@mail.ru"
 }
-5) Удалить пользователя: DELETE http://localhost:777/api/v1/users/1
+- Удалить пользователя: DELETE http://localhost:777/api/v1/users/1
   В "Authorization" добавить - access-токен
 
 
